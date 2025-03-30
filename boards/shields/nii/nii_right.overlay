@@ -1,31 +1,35 @@
-// This file was generated from a template. Edit it to match your keyboard.
-// See https://zmk.dev/docs/development/hardware-integration/new-shield for more
-// instructions.
+// /__w/zmk-config-NII/zmk-config-NII/boards/shields/nii/nii_right.overlay
+// UPDATED based on translating Old Index numbers (1-14) to actual D-pins (D0-D10)
 
-#include "nii.dtsi"
+#include "nii.dtsi" // Make sure this include is correct
 
 &default_transform {
-    // Set this to the number of columns on the left side.
+    // Set this to the number of columns on the left side (usually 6).
     col-offset = <6>;
 };
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
+    // Verify diode direction matches your PCB/wiring (col->row or row->col)
     diode-direction = "col2row";
 
+    // Columns - Translated from Old Index numbers to actual D-pins
+    // *** IMPORTANT: Assumes COL3 wire (originally Old Index 12) is REWIRED to D5 ***
     col-gpios
-        = <&xiao_d 1 GPIO_ACTIVE_HIGH>  // COL0
-        , <&xiao_d 2 GPIO_ACTIVE_HIGH>  // COL1
-        , <&xiao_d 3 GPIO_ACTIVE_HIGH>  // COL2
-        , <&xiao_d 12 GPIO_ACTIVE_HIGH> // COL3
-        , <&xiao_d 11 GPIO_ACTIVE_HIGH> // COL4
-        , <&xiao_d 10 GPIO_ACTIVE_HIGH> // COL5
+        = <&xiao_d 0 GPIO_ACTIVE_HIGH>  // COL0 (Was Old Index 1 -> D0)
+        , <&xiao_d 1 GPIO_ACTIVE_HIGH>  // COL1 (Was Old Index 2 -> D1)
+        , <&xiao_d 2 GPIO_ACTIVE_HIGH>  // COL2 (Was Old Index 3 -> D2)
+        , <&xiao_d 5 GPIO_ACTIVE_HIGH>  // COL3 (Was Old Index 12 -> 3v3 INVALID - ASSIGNED TO D5) <-- *** MUST BE REWIRED ***
+        , <&xiao_d 10 GPIO_ACTIVE_HIGH> // COL4 (Was Old Index 11 -> D10)
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>  // COL5 (Was Old Index 10 -> D9)
         ;
 
+    // Rows - Translated from Old Index numbers to actual D-pins
+    // *** IMPORTANT: Ensure your physical wiring matches these pins ***
     row-gpios
-        = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0
-        , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1
-        , <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2
-        , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3
+        = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0 (Was Old Index 4 -> D3)
+        , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1 (Was Old Index 5 -> D4)
+        , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2 (Was Old Index 9 -> D8)
+        , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3 (Was Old Index 8 -> D7)
         ;
 };
