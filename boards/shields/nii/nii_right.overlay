@@ -1,0 +1,31 @@
+// This file was generated from a template. Edit it to match your keyboard.
+// See https://zmk.dev/docs/development/hardware-integration/new-shield for more
+// instructions.
+
+#include "nii.dtsi"
+
+&default_transform {
+    // Set this to the number of columns on the left side.
+    col-offset = <6>;
+};
+
+&kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+    diode-direction = "col2row";
+
+    col-gpios
+        = <&xiao_d 1 GPIO_ACTIVE_HIGH>  // COL0
+        , <&xiao_d 2 GPIO_ACTIVE_HIGH>  // COL1
+        , <&xiao_d 3 GPIO_ACTIVE_HIGH>  // COL2
+        , <&xiao_d 12 GPIO_ACTIVE_HIGH> // COL3
+        , <&xiao_d 11 GPIO_ACTIVE_HIGH> // COL4
+        , <&xiao_d 10 GPIO_ACTIVE_HIGH> // COL5
+        ;
+
+    row-gpios
+        = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0
+        , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1
+        , <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2
+        , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3
+        ;
+};

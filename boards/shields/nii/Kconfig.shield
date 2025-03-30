@@ -1,0 +1,5 @@
+config SHIELD_NII_LEFT
+    def_bool $(shields_list_contains,nii_left)
+
+config SHIELD_NII_RIGHT
+    def_bool $(shields_list_contains,nii_right)
