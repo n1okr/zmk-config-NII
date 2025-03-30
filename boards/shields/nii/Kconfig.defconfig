@@ -1,3 +1,6 @@
+# Copyright (c) 2024 The ZMK Contributors 
+# SPDX-License-Identifier: MIT
+
 if SHIELD_NII_LEFT
 
 config ZMK_KEYBOARD_NAME
@@ -6,11 +9,11 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif # SHIELD_NII_LEFT
+endif
 
 if SHIELD_NII_LEFT || SHIELD_NII_RIGHT
 
 config ZMK_SPLIT
     default y
 
-endif # SHIELD_NII_LEFT || SHIELD_NII_RIGHT
+endif

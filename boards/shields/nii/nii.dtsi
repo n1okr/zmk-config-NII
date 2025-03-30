@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 // This file was generated from a template. Edit it to match your keyboard.
 // See https://zmk.dev/docs/development/hardware-integration/new-shield for more
 // instructions.
@@ -9,16 +15,16 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &physical_layout0;
+        zmk,matrix_transform = &default_transform;
     };
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        diode-direction = "col2row"; 
+        diode-direction = "col2row";
     };
 
-    matrix_transform0: keymap_transform_0 {
+    default_transform: keymap_transform_0 {
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this
         compatible = "zmk,matrix-transform";
