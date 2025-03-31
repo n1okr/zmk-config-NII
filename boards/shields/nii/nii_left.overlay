@@ -6,7 +6,7 @@
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     // Verify diode direction matches your PCB/wiring (col->row or row->col)
-    diode-direction = "col2row";
+    diode-direction = "row2col";
 
     // Columns - Translated from Old Index numbers to actual D-pins
     // *** IMPORTANT: Ensure your physical wiring matches these pins ***
@@ -28,3 +28,5 @@
         , <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // ROW3 (Was Old Index 1 -> D0)
         ;
 };
+
+
