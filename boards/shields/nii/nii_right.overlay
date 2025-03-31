@@ -10,8 +10,8 @@
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
-    // Verify diode direction matches your PCB/wiring (col->row or row->col)
-    diode-direction = "col2row";
+    // Fix: Changed diode direction to match left side
+    diode-direction = "row2col";
 
     // Columns - Translated from Old Index numbers to actual D-pins
     // *** IMPORTANT: Assumes COL3 wire (originally Old Index 12) is REWIRED to D5 ***
