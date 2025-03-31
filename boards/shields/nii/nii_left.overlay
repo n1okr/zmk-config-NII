@@ -11,12 +11,12 @@
     // Columns - Translated from Old Index numbers to actual D-pins
     // *** IMPORTANT: Ensure your physical wiring matches these pins ***
     col-gpios
-        = <&xiao_d 7 GPIO_ACTIVE_HIGH>  // COL0 (Was Old Index 8 -> D7)
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH>  // COL1 (Was Old Index 9 -> D8)
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH>  // COL2 (Was Old Index 10 -> D9)
-        , <&xiao_d 4 GPIO_ACTIVE_HIGH>  // COL3 (Was Old Index 5 -> D4)
-        , <&xiao_d 3 GPIO_ACTIVE_HIGH>  // COL4 (Was Old Index 4 -> D3)
-        , <&xiao_d 2 GPIO_ACTIVE_HIGH>  // COL5 (Was Old Index 3 -> D2)
+        = <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL0 (Was Old Index 8 -> D7)
+        , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL1 (Was Old Index 9 -> D8)
+        , <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL2 (Was Old Index 10 -> D9)
+        , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL3 (Was Old Index 5 -> D4)
+        , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL4 (Was Old Index 4 -> D3)
+        , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL5 (Was Old Index 3 -> D2)
         ;
 
     // Rows - Translated from Old Index numbers to actual D-pins

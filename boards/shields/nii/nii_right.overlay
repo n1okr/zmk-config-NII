@@ -16,12 +16,12 @@
     // Columns - Translated from Old Index numbers to actual D-pins
     // *** IMPORTANT: Assumes COL3 wire (originally Old Index 12) is REWIRED to D5 ***
     col-gpios
-        = <&xiao_d 0 GPIO_ACTIVE_HIGH>  // COL0 (Was Old Index 1 -> D0)
-        , <&xiao_d 1 GPIO_ACTIVE_HIGH>  // COL1 (Was Old Index 2 -> D1)
-        , <&xiao_d 2 GPIO_ACTIVE_HIGH>  // COL2 (Was Old Index 3 -> D2)
-        , <&xiao_d 5 GPIO_ACTIVE_HIGH>  // COL3 (Was Old Index 12 -> 3v3 INVALID - ASSIGNED TO D5) <-- *** MUST BE REWIRED ***
-        , <&xiao_d 10 GPIO_ACTIVE_HIGH> // COL4 (Was Old Index 11 -> D10)
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH>  // COL5 (Was Old Index 10 -> D9)
+        = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL0 (Was Old Index 1 -> D0)
+        , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL1 (Was Old Index 2 -> D1)
+        , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL2 (Was Old Index 3 -> D2)
+        , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL3 (Was Old Index 12 -> 3v3 INVALID - ASSIGNED TO D5) <-- *** MUST BE REWIRED ***
+        , <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)> // COL4 (Was Old Index 11 -> D10)
+        , <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // COL5 (Was Old Index 10 -> D9)
         ;
 
     // Rows - Translated from Old Index numbers to actual D-pins
