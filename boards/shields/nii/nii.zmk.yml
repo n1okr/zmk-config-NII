@@ -15,7 +15,7 @@ url: https://github.com/yourusername/nii
 features:
   - keys
   - studio  # Remove this line if your keyboard will not support ZMK Studio
-requires: [xiao_ble]
+requires: [seeeduino_xiao_ble]
 
 siblings:
   - nii_left
