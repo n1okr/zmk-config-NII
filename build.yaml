@@ -18,8 +18,6 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-board: [ "xiao_ble" ]
-shield: [ "nii_left", "nii_right" ]
 include:
   - board: xiao_ble
     shield: nii_left
@@ -35,5 +33,5 @@ include:
     artifact-name: nii_right_with_studio
 
   - board: xiao_ble
-    shield: settings-reset
+    shield: settings_reset
 
