@@ -4,7 +4,6 @@
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "default_transform";
-
         kscan = <&kscan0>;
         transform = <&matrix_transform0>;
 
@@ -52,5 +51,16 @@
             , <&key_physical_attrs 100 100  997  395       0     0     0>
             , <&key_physical_attrs 100 100 1094  395       0     0     0>
             ;
+    };
+
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+
+        physical_layout0 {
+            physical-layout = <&physical_layout0>;
+            positions = <>;
+        };
     };
 };
