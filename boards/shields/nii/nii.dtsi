@@ -16,7 +16,7 @@
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "row2col";
+        diode-direction = "col2row";
     };
 
     default_transform: keymap_transform_0 {
