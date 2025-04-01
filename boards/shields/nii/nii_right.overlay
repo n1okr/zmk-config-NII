@@ -1,18 +1,13 @@
 // /__w/zmk-config-NII/zmk-config-NII/boards/shields/nii/nii_right.overlay
 // UPDATED based on translating Old Index numbers (1-14) to actual D-pins (D0-D10)
 
-#include "nii.dtsi" // Make sure this include is correct
+#include "nii.dtsi" 
 
 &default_transform {
-    // Set this to the number of columns on the left side (usually 6).
     col-offset = <6>;
 };
 
 &kscan0 {
-    compatible = "zmk,kscan-gpio-matrix";
-    // Fix: Changed diode direction to match left side
-    diode-direction = "col2row";
-
 
     col-gpios
         = <&xiao_d 0 (GPIO_ACTIVE_HIGH)> 

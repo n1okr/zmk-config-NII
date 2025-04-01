@@ -11,13 +11,10 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
         zmk,physical-layout = &physical_layout0;
     };
 
-    kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
-    };
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
@@ -31,4 +28,11 @@
                                     RC(3,3) RC(3,4) RC(3,5)    RC(3,6) RC(3,7) RC(3,8)
         >;
     };
+
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+    };
+
 };

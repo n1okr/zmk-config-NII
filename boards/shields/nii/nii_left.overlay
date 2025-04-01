@@ -1,14 +1,10 @@
 // /__w/zmk-config-NII/zmk-config-NII/boards/shields/nii/nii_left.overlay
 // UPDATED based on translating Old Index numbers (1-14) to actual D-pins (D0-D10)
 
-#include "nii.dtsi" // Make sure this include is correct
+#include "nii.dtsi" 
 
 &kscan0 {
-    compatible = "zmk,kscan-gpio-matrix";
 
-
-    // Columns - Translated from Old Index numbers to actual D-pins
-    // *** IMPORTANT: Ensure your physical wiring matches these pins ***
     col-gpios
         = <&xiao_d 7 (GPIO_ACTIVE_HIGH)>
         , <&xiao_d 8 (GPIO_ACTIVE_HIGH)>
@@ -18,13 +14,11 @@
         , <&xiao_d 2 (GPIO_ACTIVE_HIGH)>
         ;
 
-    // Rows - Translated from Old Index numbers to actual D-pins
-    // *** IMPORTANT: Assumes ROW1 wire (originally Old Index 12) is REWIRED to D5 ***
     row-gpios
-        = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0 (Was Old Index 11 -> D10)
-        , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // ROW1 (Was Old Index 12 -> 3v3 INVALID - ASSIGNED TO D5) <-- *** MUST BE REWIRED ***
-        , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // ROW2 (Was Old Index 2 -> D1)
-        , <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // ROW3 (Was Old Index 1 -> D0)
+        = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+        , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+        , <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
         ;
 };
 
