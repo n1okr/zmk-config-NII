@@ -18,6 +18,8 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+board: [ "xiao_ble" ]
+shield: [ "nii_left", "nii_right" ]
 include:
   - board: xiao_ble
     shield: nii_left
