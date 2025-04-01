@@ -19,7 +19,10 @@
 
         default_layer {
             bindings = <
-&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp X  &kp Y  &kp R  &kp I  &kp O  &kp D  &kp F  &kp A  &kp V  &kp TAB  &kp D  &kp F  &kp G  &kp H  &kp J  &kp Q  &kp BACKSPACE  &kp SEMI  &kp C  &kp B  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp ESC  &kp M  &kp S  &kp W  &kp FSLH  &kp UP  &kp E  &kp SPACE  &kp T  &kp Z  &mo 1  &kp G
+&kp ESC    &kp Q  &kp W  &kp E  &kp R          &kp T        &kp Y    &kp R  &kp I  &kp O          &kp D     &kp F
+&kp TAB    &kp A  &kp S  &kp D  &kp F          &kp G        &kp H    &kp J  &kp Q  &kp BACKSPACE  &kp SEMI  &kp C
+&kp ENTER  &kp Z  &kp X  &kp C  &kp V          &kp B        &kp ESC  &kp M  &kp S  &kp W          &kp FSLH  &kp UP
+                         &mo 1  &kp BACKSPACE  &kp SPACE    &kp Z    &mo 1  &kp G
             >;
         };
 
@@ -29,7 +32,10 @@
         layer_1 {
             label = "Function Layer"; // Optional label for display module
             bindings = <
-&none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &sys_reset  &bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none         &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset    &bt BT_CLR    &bt BT_NXT    &bt BT_PRV    &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
