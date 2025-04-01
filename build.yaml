@@ -21,8 +21,8 @@
 include:
   - board: seeeduino_xiao_ble
     shield: nii_left
-    # snippet: studio-rpc-usb-uart
-    # cmake-args: -DCONFIG_ZMK_STUDIO=y
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: nii_left_with_studio
 
 
