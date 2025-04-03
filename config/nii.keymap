@@ -4,7 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 // Define constants for layer names for readability (optional but good practice)
 
@@ -66,10 +66,10 @@
 
         default_layer {
             bindings = <
-&kp ESC    &mt NUMBER_1 Q   &mt NUMBER_2 W   &mt NUMBER_3 E  &mt NUMBER_4 R     &mt N5 T       &kp Y    &kp U  &kp I      &kp O       &kp P     &kp LEFT_BRACKET
-&kp TAB    &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LCTRL D    &HML LEFT_SHIFT F  &mt MINUS G    &kp H    &kp J  &kp K      &kp L       &kp SEMI  &kp SQT
-&kp ENTER  &kp Z            &kp X            &kp C           &kp V              &kp B          &kp N    &kp M  &kp COMMA  &kp PERIOD  &kp FSLH  &kp SPACE
-                                             &mo 1           &kp BACKSPACE      &kp SPACE      &kp RET  &mo 1  &mo 1
+&kp ESC    &HML NUMBER_1 Q  &HML NUMBER_2 W  &HML NUMBER_3 E  &HML NUMBER_4 R    &HML N5 T       &kp Y    &kp U  &kp I      &kp O       &kp P     &kp LEFT_BRACKET
+&kp TAB    &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LCTRL D     &HML LEFT_SHIFT F  &HML MINUS G    &kp H    &kp J  &kp K      &kp L       &kp SEMI  &kp SQT
+&kp ENTER  &kp Z            &kp X            &kp C            &kp V              &kp B           &kp N    &kp M  &kp COMMA  &kp PERIOD  &kp FSLH  &kp SPACE
+                                             &mo 1            &kp BACKSPACE      &kp SPACE       &kp RET  &mo 1  &mo 1
             >;
         };
 
@@ -79,10 +79,10 @@
         layer_1 {
             display-name = "Function Layer"; // Optional label for display module
             bindings = <
-&none         &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&sys_reset    &bt BT_CLR    &bt BT_NXT    &bt BT_PRV    &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans        &trans        &trans          &trans  &trans  &trans
+&none           &trans        &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans
+&mkp RCLK       &mkp LCLK     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_NXT      &bt BT_PRV      &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                                              &trans          &trans           &trans            &trans  &trans  &trans
             >;
         };
     };
