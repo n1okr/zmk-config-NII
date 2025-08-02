@@ -31,6 +31,6 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: nii_right_with_studio
 
-  - board: seeeduino_xiao_ble
+  # - board: seeeduino_xiao_ble
   #   shield: settings_reset
     
