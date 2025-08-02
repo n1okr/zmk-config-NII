@@ -79,9 +79,9 @@
         layer_1 {
             display-name = "Function Layer"; // Optional label for display module
             bindings = <
-&none           &trans        &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans
-&mkp RCLK       &mkp LCLK     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_NXT      &bt BT_PRV      &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset      &trans        &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &trans  &trans  &trans      &trans      &trans        &sys_reset
+&mkp RCLK       &mkp LCLK     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans      &trans      &trans        &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_NXT      &bt BT_PRV      &trans           &trans            &trans  &trans  &bt BT_PRV  &bt BT_NXT  &bt BT_SEL 0  &bt BT_CLR_ALL
                                               &trans          &trans           &trans            &trans  &trans  &trans
             >;
         };
