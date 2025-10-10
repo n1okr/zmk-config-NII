@@ -110,10 +110,10 @@
 
         default_layer {
             bindings = <
-&kp ESC    &HML NUMBER_1 Q      &HML NUMBER_2 W  &HML NUMBER_3 E  &HML NUMBER_4 R    &HML N5 T       &kp Y    &kp U               &kp I             &kp O             &kp P                         &kp LEFT_BRACKET
-&kp TAB    &HML LEFT_CONTROL A  &HML LEFT_ALT S  &HML LEFT_GUI D  &HML LEFT_SHIFT F  &HML MINUS G    &kp H    &HMR RIGHT_SHIFT J  &HMR RIGHT_GUI K  &HMR RIGHT_ALT L  &HMR RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp ENTER  &kp Z                &kp X            &kp C            &kp V              &kp B           &kp N    &kp M               &kp COMMA         &kp PERIOD        &kp FSLH                      &kp SPACE
-                                                 &mo 2            &kp BACKSPACE      &kp SPACE       &kp RET  &mo 1               &lang
+&kp ESC    &HML NUMBER_1 Q      &HML NUMBER_2 W  &HML NUMBER_3 E  &HML NUMBER_4 R    &HML N5 T       &HMR N5 Y    &HMR N6 U           &HMR N7 I         &HMR N8 O         &HMR N9 P                     &HMR N0 LEFT_BRACKET
+&kp TAB    &HML LEFT_CONTROL A  &HML LEFT_ALT S  &HML LEFT_GUI D  &HML LEFT_SHIFT F  &HML MINUS G    &kp H        &HMR RIGHT_SHIFT J  &HMR RIGHT_GUI K  &HMR RIGHT_ALT L  &HMR RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp ENTER  &kp Z                &kp X            &kp C            &kp V              &kp B           &kp N        &kp M               &kp COMMA         &kp PERIOD        &kp FSLH                      &kp SPACE
+                                                 &mo 3            &lt 2 BACKSPACE    &lt 1 SPACE     &lt 1 ENTER  &mo 1               &lang
             >;
         };
 
@@ -123,14 +123,23 @@
         layer_1 {
             display-name = "Function Layer"; // Optional label for display module
             bindings = <
-&trans     &trans     &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans      &trans
-&mkp RCLK  &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD  &trans
-&trans     &trans     &trans          &trans          &trans           &trans            &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans      &trans
-                                      &trans          &trans           &trans            &trans        &trans        &trans
+&kp TILDE  &kp EXCL     &kp AT     &kp HASH       &kp DOLLAR  &kp EQUAL    &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans      &kp DEL
+&kp GRAVE  &kp PERCENT  &kp CARET  &kp AMPS       &kp PLUS    &kp MINUS    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans      &kp PRINTSCREEN
+&trans     &trans       &kp PIPE   &kp BACKSLASH  &kp SLASH   &kp ASTRK    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
+                                   &trans         &trans      &trans       &trans        &trans        &trans
             >;
         };
 
         layer_2 {
+            bindings = <
+&trans     &trans     &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans
+&mkp RCLK  &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans          &trans           &trans            &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
             bindings = <
 &sys_reset      &trans        &trans      &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans        &trans      &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
