@@ -57,6 +57,50 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <28 29>;
         };
+
+        brace-r {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <6 7>;
+        };
+
+        parenthesis-r {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <18 19>;
+        };
+
+        bracket_r {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <30 31>;
+        };
+
+        up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <7 8>;
+        };
+
+        down {
+            bindings = <&kp DOWN>;
+            key-positions = <31 32>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <19 20>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <20 21>;
+        };
+    };
+
+    macros {
+        lang: lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(SPACE)>;
+            label = "LANG";
+        };
     };
 
     keymap {
@@ -66,10 +110,10 @@
 
         default_layer {
             bindings = <
-&kp ESC    &HML NUMBER_1 Q  &HML NUMBER_2 W  &HML NUMBER_3 E  &HML NUMBER_4 R    &HML N5 T       &kp Y    &kp U  &kp I      &kp O       &kp P     &kp LEFT_BRACKET
-&kp TAB    &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LCTRL D     &HML LEFT_SHIFT F  &HML MINUS G    &kp H    &kp J  &kp K      &kp L       &kp SEMI  &kp SQT
-&kp ENTER  &kp Z            &kp X            &kp C            &kp V              &kp B           &kp N    &kp M  &kp COMMA  &kp PERIOD  &kp FSLH  &kp SPACE
-                                             &mo 1            &kp BACKSPACE      &kp SPACE       &kp RET  &mo 1  &mo 1
+&kp ESC    &HML NUMBER_1 Q  &HML NUMBER_2 W  &HML NUMBER_3 E  &HML NUMBER_4 R    &HML N5 T       &kp Y    &kp U               &kp I                 &kp O             &kp P                     &kp LEFT_BRACKET
+&kp TAB    &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LCTRL D     &HML LEFT_SHIFT F  &HML MINUS G    &kp H    &HMR RIGHT_SHIFT J  &HMR RIGHT_CONTROL K  &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMICOLON  &kp SQT
+&kp ENTER  &kp Z            &kp X            &kp C            &kp V              &kp B           &kp N    &kp M               &kp COMMA             &kp PERIOD        &kp FSLH                  &kp SPACE
+                                             &mo 2            &kp BACKSPACE      &kp SPACE       &kp RET  &mo 1               &lang
             >;
         };
 
@@ -79,10 +123,19 @@
         layer_1 {
             display-name = "Function Layer"; // Optional label for display module
             bindings = <
-&sys_reset      &trans        &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &trans  &trans  &trans      &trans      &trans        &sys_reset
-&mkp RCLK       &mkp LCLK     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans      &trans      &trans        &trans
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_NXT      &bt BT_PRV      &trans           &trans            &trans  &trans  &bt BT_PRV  &bt BT_NXT  &bt BT_SEL 0  &bt BT_CLR_ALL
-                                              &trans          &trans           &trans            &trans  &trans  &trans
+&trans     &trans     &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans      &trans
+&mkp RCLK  &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD  &trans
+&trans     &trans     &trans          &trans          &trans           &trans            &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans      &trans
+                                      &trans          &trans           &trans            &trans        &trans        &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&sys_reset      &trans        &trans      &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans      &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_PRV  &bt BT_NXT  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans      &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
